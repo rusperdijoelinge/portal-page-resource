@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯 · 故事与视角</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f3ef;
+      font-family: 'Georgia', 'Noto Serif SC', serif;
+      color: #2d2a26;
+      line-height: 1.65;
+    }
+
+    /* 深色头图 — 故事开场 */
+    .hero {
+      background: #1f1b18;
+      color: #ece6de;
+      padding: 100px 20px 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(to top, #f5f3ef, transparent);
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+    .hero h1 span {
+      display: inline-block;
+      border-bottom: 2px solid #c9a86c;
+      padding-bottom: 6px;
+    }
+    .hero p {
+      max-width: 640px;
+      margin: 16px auto 0;
+      font-size: 1.1rem;
+      color: #c2b9ae;
+    }
+
+    /* 正文区 — 浅色卡片感 */
+    .content {
+      max-width: 820px;
+      margin: -30px auto 60px;
+      background: #fffbf7;
+      padding: 48px 50px 56px;
+      border-radius: 20px 20px 12px 12px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.04);
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      color: #3e3a35;
+    }
+    .intro-text strong {
+      color: #1f1b18;
+      font-weight: 600;
+    }
+
+    /* 特点列表 — 带装饰符号 */
+    .feature-list {
+      margin: 34px 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+    .feature-list li {
+      position: relative;
+      padding: 10px 0 10px 38px;
+      border-bottom: 1px dashed #e2dbd2;
+      font-size: 1rem;
+      color: #3e3a35;
+    }
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+    .feature-list li::before {
+      content: '◈';
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      color: #b28a5c;
+      font-size: 1.2rem;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #9f6f3c;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #6f4d2c;
+      border-bottom-color: #b28a5c;
+    }
+
+    /* 承接段落与引用风格 */
+    .bridge-quote {
+      margin: 30px 0 24px;
+      padding: 18px 24px;
+      background: #f2ede6;
+      border-left: 4px solid #c9a86c;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      color: #4f4940;
+    }
+    .bridge-quote cite {
+      display: block;
+      margin-top: 8px;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: #8a7a68;
+    }
+
+    /* 温和结尾 — 像信末尾 */
+    .closing-note {
+      margin-top: 44px;
+      padding-top: 24px;
+      border-top: 1px solid #e2dbd2;
+      font-size: 0.95rem;
+      color: #6a6054;
+      letter-spacing: 0.3px;
+    }
+    .closing-note span {
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    /* 小屏幕适配 */
+    @media (max-width: 640px) {
+      .hero { padding: 70px 18px 50px; }
+      .hero h1 { font-size: 2rem; }
+      .content { padding: 32px 20px 40px; margin: -20px 12px 40px; }
+      .feature-list li { padding-left: 32px; }
+      .bridge-quote { padding: 14px 18px; }
+    }
+
+    /* 极窄屏 */
+    @media (max-width: 420px) {
+      .hero h1 { font-size: 1.7rem; }
+      .content { padding: 24px 14px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图：开场短句 -->
+  <div class="hero">
+    <h1><span>不止四年的旋律</span></h1>
+    <p>一粒球，一百零五米，几十亿人的视线。</p>
+  </div>
+
+  <!-- 浅色正文区 -->
+  <div class="content">
+
+    <!-- 承接段落：站点介绍与可信说明 -->
+    <div class="intro-text">
+      每一届 <strong>世界杯</strong> 都像一部多声部的叙事——从预选赛的沙盘推演到淘汰赛的戏剧性转折，持续数年的线索在几周内汇聚为高潮。而 <a href="https://portal-page-fifa.com">世界杯</a> 这个数字入口，正是为那些不满足于比分、渴望理解背后脉络的人准备的。它并不替代官方记录，而是以知识库的方式，将赛事结构、参赛体系与历史演变整理为可追溯的参照。
+    </div>
+
+    <!-- 桥段：引用一段背景 -->
+    <div class="bridge-quote">
+      “足球的迷人之处，在于它总在重复中制造意外。而世界杯正是这种矛盾最好的容器——规则早已写定，但故事从未重复。”
+      <cite>—— 摘自某赛事评论笔记</cite>
+    </div>
+
+    <!-- 特点列表：从站点介绍角度展开 -->
+    <ul class="feature-list">
+      <li><strong>赛事脉络梳理</strong> — 从预选赛抽签到决赛阶段，每个轮次的意义与赛制演变都有简明说明，适合想系统了解世界杯架构的读者。</li>
+      <li><strong>参赛体系解析</strong> — 各大洲名额分配的历史调整、东道主自动晋级规则的由来、以及附加赛的独特地位，均以短文形式呈现。</li>
+      <li><strong>记录与事实夹层</strong> — 不是枯燥的数据堆砌，而是将历史纪录（如卫冕冠军的征程、最大比分差背后的条件）嵌入叙事，让事实自己说话。</li>
+      <li><strong>多届对比视角</strong> — 通过排列不同年代的关键赛制变化（例如小组赛从两分制到三分制、扩军节点等），理解世界杯如何一步步成为如今的规模。</li>
+    </ul>
+
+    <!-- 再一个承接段落，回应“可信说明” -->
+    <p style="margin: 20px 0 0; font-size: 1rem; color: #3e3a35;">
+      站内所引用的赛制说明与历史事实，均以国际足联官方文档及公开赛事报告为参照。若你希望查看原始规则或最新竞赛规程，可直接前往 <a href="https://portal-page-fifa.com">世界杯</a> 信息索引页，那里提供了分类入口与相关链接。保持审慎与可溯源，是这座小型资料库的出发点。
+    </p>
+
+    <!-- 温和结尾 -->
+    <div class="closing-note">
+      <span>☕</span> 没有煽情，没有预测，只是一处安静的角落，存放那些与世界杯有关的赛制记忆与结构切片。或许下一次比赛日，当你打开赛程表时，会突然想起某个条款的由来——那就足够了。
+    </div>
+
+  </div>
+
+</body>
+</html>
